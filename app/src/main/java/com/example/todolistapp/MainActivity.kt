@@ -70,12 +70,13 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     Scaffold(bottomBar = { TabView(tabBarItems, navController) }) {
-                        NavHost(navController = navController, startDestination = allTab.title) {
-                            composable(allTab.title) {
-                                Text(allTab.title)
+
+                        NavHost(navController = navController, startDestination = Screen.All.route) {
+                            composable(Screen.All.route) {
+                                Text(Screen.All.route)
                             }
-                            composable(completed.title) {
-                                Text(completed.title)
+                            composable(Screen.Completed.route) {
+                                Text(Screen.Completed.route)
                             }
                         }
                     }
