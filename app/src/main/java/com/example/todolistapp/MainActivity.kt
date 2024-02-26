@@ -61,10 +61,10 @@ class MainActivity : ComponentActivity() {
 
                         NavHost(navController = navController, startDestination = Screen.All.route) {
                             composable(Screen.All.route) {
-                                Text(Screen.All.route)
+                                AllScreenContent()
                             }
                             composable(Screen.Completed.route) {
-                                Text(Screen.Completed.route)
+                                CompletedScreenContent()
                             }
                         }
                     }
