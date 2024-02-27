@@ -47,6 +47,8 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
+
 }
 
 dependencies {
@@ -69,4 +71,9 @@ dependencies {
     implementation ("androidx.core:core-splashscreen:1.0.0")
 
     implementation ("androidx.navigation:navigation-compose:2.7.7")
+    implementation ("androidx.room:room-runtime:2.6.1")
+    annotationProcessor("androidx.room:room-compiler:2.6.1")
+
+    implementation ("com.google.devtools.ksp:symbol-processing-api:1.9.21-1.0.15")
+
 }
