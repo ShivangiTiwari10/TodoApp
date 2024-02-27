@@ -42,13 +42,13 @@ class MainActivity : ComponentActivity() {
                 selectedIcon = Icons.Filled.List,
                 unselectedIcon = Icons.Outlined.List
             )
-            val completed = TabBarItem(
-                title = "Completed",
+            val add = TabBarItem(
+                title = "Add",
                 selectedIcon = Icons.Filled.Check,
                 unselectedIcon = Icons.Outlined.Check
             )
 
-            val tabBarItems = listOf(allTab, completed)
+            val tabBarItems = listOf(allTab, add)
 
             val navController = rememberNavController()
 
@@ -59,13 +59,17 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Scaffold(bottomBar = { TabView(tabBarItems, navController) }) {
 
-                        NavHost(navController = navController, startDestination = Screen.All.route) {
+                        NavHost(
+                            navController = navController,
+                            startDestination = Screen.All.route
+                        ) {
                             composable(Screen.All.route) {
                                 AllScreenContent()
                             }
                             composable(Screen.Completed.route) {
-                                CompletedScreenContent()
+                                Add()
                             }
+
                         }
                     }
                 }
@@ -74,7 +78,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
 
 
 @Composable
