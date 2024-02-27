@@ -21,12 +21,14 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-
+import androidx.navigation.NavHost
+import androidx.navigation.compose.rememberNavController
 
 
 @Composable
 fun Add() {
     TextInputs()
+
 }
 
 @Composable
@@ -68,10 +70,13 @@ fun TextInputs() {
         Button(
 
             modifier = Modifier.size(width = 100.dp, height = 50.dp),
-            onClick = {}
+            onClick = {
+
+            }
         ) {
             Text(text = "Add", fontSize = 20.sp)
 
         }
     }
+
 }

@@ -7,8 +7,10 @@ import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.List
+import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material.icons.outlined.List
 import androidx.compose.material3.MaterialTheme
@@ -23,7 +25,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.todolistapp.ui.theme.TodoListAppTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     private val viewModel: SplashViewModel by viewModels()
 
@@ -44,8 +49,8 @@ class MainActivity : ComponentActivity() {
             )
             val add = TabBarItem(
                 title = "Add",
-                selectedIcon = Icons.Filled.Check,
-                unselectedIcon = Icons.Outlined.Check
+                selectedIcon = Icons.Filled.Add,
+                unselectedIcon = Icons.Outlined.Add
             )
 
             val tabBarItems = listOf(allTab, add)
