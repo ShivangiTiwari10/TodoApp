@@ -1,6 +1,5 @@
 package com.example.todolistapp.ui.theme.item
 
-import android.util.Log
 import com.example.todolistapp.R
 import com.example.todolistapp.TaskTopAppBar
 import androidx.compose.foundation.layout.Arrangement

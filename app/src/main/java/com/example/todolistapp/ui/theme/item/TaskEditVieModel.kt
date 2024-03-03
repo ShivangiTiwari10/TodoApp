@@ -47,7 +47,7 @@ class TaskEditVieModel(
 
     private fun validateInput(uiState: TaskDetails = itemUiState.taskDetails): Boolean {
         return with(uiState) {
-            name.isNotBlank() && isChecked !=null && description.isNotBlank()
+            name.isNotBlank()  && description.isNotBlank()
         }
     }
 

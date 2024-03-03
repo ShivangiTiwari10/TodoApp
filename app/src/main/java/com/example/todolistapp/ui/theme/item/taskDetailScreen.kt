@@ -52,8 +52,7 @@ object TaskDetailsDestination : NavigationDestination {
 fun TaskDetailsScreen(
     navigateToEditItem: (Int) -> Unit,
     navigateBack: () -> Unit,
-    modifier: Modifier = Modifier,
-            viewModel: TaskDetailsViewModel = viewModel(factory = AppViewModelProvider.Factory)
+    viewModel: TaskDetailsViewModel = viewModel(factory = AppViewModelProvider.Factory)
 ) {
     val uiState = viewModel.uiState.collectAsState()
     val coroutineScope = rememberCoroutineScope()
