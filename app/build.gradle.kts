@@ -1,7 +1,10 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id ("com.google.devtools.ksp")
+
 }
+
 
 android {
     namespace = "com.example.todolistapp"
@@ -47,10 +50,10 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
 }
 
 dependencies {
-
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
     implementation("androidx.activity:activity-compose:1.8.2")
@@ -66,4 +69,18 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+    implementation ("androidx.core:core-splashscreen:1.0.0")
+    implementation ("androidx.navigation:navigation-compose:2.7.7")
+    implementation ("androidx.room:room-ktx:2.6.1")
+    annotationProcessor("androidx.room:room-compiler:2.6.1")
+
+    implementation ("com.google.devtools.ksp:symbol-processing-api:1.9.21-1.0.15")
+    implementation ("androidx.hilt:hilt-navigation-fragment:1.0.0")
+
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+
+    ksp("androidx.room:room-compiler:2.5.0")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+
+
 }
